@@ -1,17 +1,24 @@
+<!-- We don't really put any stuff into App.vue, it's basically a container for the other components -->
+<!-- although ultimately it is still just a component, but its the root -->
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <DogButton/>
+    <CatButton/>
+    <DisplaySelection/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import DisplaySelection from '@/components/DisplaySelection.vue';
+import DogButton from '@/components/DogButton.vue';
+import CatButton from '@/components/CatButton.vue';
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    DisplaySelection,
+    DogButton,
+    CatButton
   }
 }
 </script>
